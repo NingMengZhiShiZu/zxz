@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我要留学</title>
+    <link rel="stylesheet" href="xinxi.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2 style="text-align: center;">申请留学信息表</h2>
+        <form id="myForm" action="http://localhost:3000/" method="POST">
+            <div class="form-group">
+                <label for="name" >姓名：</label>
+                <input type="text" id="name" name="姓名" placeholder="请输入您的姓名" tabindex="1">
+            </div>
+            <div class="form-group">
+                <label for="phone">电话：</label>
+                <input type="text" id="phone" name="电话" placeholder="请输入您的电话" tabindex="2">
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱：</label>
+                <input type="email" id="email" name="邮箱" placeholder="请输入您的邮箱" tabindex="3">
+            </div>
+            <div class="form-group">
+                <label for="gj">意向国家：</label>
+                <input type="text" id="gj" name="意向国家" placeholder="请输入您意向国家" tabindex="4">
+            </div>
+            <div class="checkbox-group">
+                <strong>意向阶段：</strong>
+                <select name="意向阶段" id="">
+                <option value="" selected disabled hidden>请选择</option>
+                <option value="高中">高中</option>
+                <option value="大学">大学</option>
+                <option value="硕士">硕士</option>
+                <option value="博士">博士</option>
+            </select>
+            </div>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+</body>
+</html>

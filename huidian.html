@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免费回电</title>
+    <link rel="stylesheet" href="xinxi.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2 style="text-align: center;">免费回电申请表</h2>
+        <form id="myForm" action="http://localhost:3000/" method="POST">
+            <div class="form-group">
+                <label for="name" >姓名：</label>
+                <input type="text" id="name" name="姓名" placeholder="请输入您的姓名" tabindex="1">
+            </div>
+            <div class="form-group">
+                <label for="phone">电话：</label>
+                <input type="text" id="phone" name="电话" placeholder="请输入您的电话" tabindex="2">
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱：</label>
+                <input type="email" id="email" name="邮箱" placeholder="请输入您的邮箱" tabindex="3">
+            </div>
+            <div class="checkbox-group">
+                <strong>您的需求：</strong>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="option1" name="申请需求[]" value="移民">
+                        <label for="option1">移民</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="option2" name="申请需求[]" value="留学">
+                        <label for="option2">留学</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="option3" name="申请需求[]" value="签证">
+                        <label for="option3">签证</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="message">详细描述：</label>
+                <textarea id="message"></textarea>
+            </div>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+</body>
+</html>
+<script src="shuju.js"></script>

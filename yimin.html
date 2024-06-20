@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我要移民</title>
+    <link rel="stylesheet" href="xinxi.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2 style="text-align: center;">申请移民信息表</h2>
+        <form id="myForm" action="http://localhost:3000/" method="POST">
+            <div class="form-group">
+                <label for="name" >姓名：</label>
+                <input type="text" id="name" name="姓名" placeholder="请输入您的姓名" tabindex="1">
+            </div>
+            <div class="form-group">
+                <label for="phone">电话：</label>
+                <input type="text" id="phone" name="电话" placeholder="请输入您的电话" tabindex="2">
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱：</label>
+                <input type="email" id="email" name="邮箱" placeholder="请输入您的邮箱" tabindex="3">
+            </div>
+            <div class="form-group">
+                <label for="gj">意向国家：</label>
+                <input type="text" id="gj" name="意向国家" placeholder="请输入您意向国家" tabindex="4">
+            </div>
+            <div class="checkbox-group">
+                <strong>移民预算：</strong>
+                <ul>
+                    <li>
+                        <input type="radio" id="choice1" name="预算" value="不限">
+                        <label for="choice1">不限</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="choice2" name="预算" value="60万以下">
+                        <label for="choice2">60万以下</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="choice3" name="预算" value="60-100万">
+                        <label for="choice3">60-100万</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="choice4" name="预算" value="100-200万">
+                        <label for="choice4">100-200万</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="choice5" name="预算" value="200万以上">
+                        <label for="choice5">200万以上</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="checkbox-group">
+                <strong>项目类型：</strong>
+                <ul>
+                    <li>
+                        <input type="radio" id="ys1" name="项目类型" value="不限">
+                        <label for="ys1">不限</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="ys2" name="项目类型" value="商业&投资移民">
+                        <label for="ys2">商业&投资移民</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="ys3" name="项目类型" value="非营业性移民">
+                        <label for="ys3">非营业性移民</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="ys4" name="项目类型" value="购房移民">
+                        <label for="ys4">购房移民</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="ys5" name="项目类型" value="护照移民">
+                        <label for="ys5">护照移民</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="checkbox-group">
+                <strong>居住需求：</strong>
+                <ul>
+                    <li>
+                        <input type="radio" id="jz1" name="居住需求" value="不限">
+                        <label for="jz1">不限</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="jz2" name="居住需求" value="有居住要求">
+                        <label for="jz2">有居住要求</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="jz3" name="居住需求" value="无居住要求">
+                        <label for="jz3">无居住要求</label>
+                    </li>
+                </ul> 
+            </div>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+</body>
+</html>
+

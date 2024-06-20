@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    width: 100% auto;
+}
+
+/* 头部 */
+img {
+    max-width: 65%;
+    /* 限制图片宽度不超过容器宽度，保持图片比例 */
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    /* 横向居中 */
+    align-items: center;
+    /* 纵向居中 */
+}
+
+/* 菜单栏 */
+.header {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.header a{
+    color:black;
+}
+.header ul {
+    display: flex;
+    justify-content: center;
+}
+
+.header li {
+    padding: 8px;
+    line-height: auto;
+    font-family: '微软雅黑';
+}
+
+/* 搜索框 */
+.search {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 50%;
+    /* 设置一个固定宽度 */
+    max-width: 100%;
+    /* 可选，保证在小屏幕上不超过父容器 */
+    margin: 0 auto;
+    /* 用于在块级元素中水平居中（需确保父元素宽度大于280px） */
+    border-radius: 20px;
+    height: 35px;
+    border: 1px solid rgb(254, 73, 73);
+}
+
+.search input {
+    width: 70%;
+    outline: none;
+    border: none;
+    /* 移除轮廓 */
+    /* 边框 */
+    height: 30px;
+    /* 高度可以根据需要调整 */
+    /* 内边距，让文本有空间 */
+    box-sizing: border-box;
+}
+
+.search a {
+    background-image: url(search.png);
+    background-repeat: no-repeat;
+    background-position: 12px 5px;
+    width: 30px;
+    height: 30px;
+}
+
+/* 介绍页 */
+.in-box {
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+        @keyframes slide {
+    0%, 50% {
+        opacity: 1; /* 第一个div可见 */
+    }
+    50.1%, 100% {
+        opacity: 0; /* 第一个div不可见，第二个div由于初始就是visible所以自然显示 */
+    }
+}   
+.introduce1, .introduce2 {
+    position: absolute; /* 这使得两个div重叠 */
+    width: 100%;
+    transition: opacity 0.5s ease-in-out; /* 平滑过渡效果 */
+}
+       .introduce1 {
+    background-image: url(封面.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+.introduce2 {
+    background-image: url(移民2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    animation: slide 5s linear infinite;
+}
+.in-box a{
+    color:white;
+}
+.in-box h3 {
+    font-family: "微软雅黑";
+    color: white;
+    line-height: 200px;
+    padding-left: 50px;
+}
+
+
+/* 板块开头 */
+.project-box {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.title1 {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 90%;
+    border-left: 2px solid rgb(26, 179, 255);
+    padding-left: 10px;
+}
+
+.title1 p {
+    font-size: 10px;
+    color: rgb(214, 214, 214);
+}
+
+.title {
+    /* margin-left: 20px; */
+    margin-top: 20px;
+    width: 90%;
+    border-left: 2px solid rgb(26, 179, 255);
+    /* margin-left: 10px; */
+    padding-left: 10px;
+}
+
+.title p {
+    font-size: 10px;
+    color: rgb(214, 214, 214);
+}
+
+
+.immigrant {
+    margin-right: 20px;
+    display: flex;
+    margin-top: 20px;
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 30px;
+    background-color: red;
+}
+
+.immigrant p {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+
+/* 热门项目 */
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.project a{
+    color: rgb(54, 245, 245);
+}
+
+/* 板块占位 */
+
+.img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    gap: 2px; /* 添加gap来控制div之间的间距 */
+}
+.img p{
+    display:inline-block;
+}
+.img .top,
+.bottom{
+    min-height: 110px; /* 保证最小高度一致 */
+    object-fit: cover;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%; /* 控制底部间距，可调整 */
+    width:48%
+}
+.img  p{
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.img h4{
+    padding-top: 40px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    line-height:20px;
+}
+
+.img .top:nth-child(1){
+    background-image: url(移民2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    background-size: cover;
+}
+
+.img .top:nth-child(2){
+    background-image: url(移民3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    background-size: cover;
+}
+.img .bottom:nth-child(3){
+    background-image: url(移民4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    background-size: cover;
+}
+.img .bottom:nth-child(4){
+    background-image: url(移民5.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    background-size: cover;
+}
+.genduo{
+    background-color: aliceblue;
+    height: 50px;
+}
+.gd-box{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+}
+.gd{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 10px;
+}
+.gd h6{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 3px;
+    font-size: 10px;
+}
+.gd a{
+    color: red;
+}
+/* 新闻资讯 */
+.NEWS {
+    width: 100%;
+    height: 200px;
+}
+
+.NEWS-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width:90%;
+}
+
+.NEWS-box img {
+    width: 50%;
+    /* 你可以根据需要调整图片的宽度 */
+    height: 180px;
+    /* 保持图片的宽高比 */
+}
+
+.NEWS {
+    width: 210px;
+    /* 设置NEWS容器的宽度，与图片宽度之和不超过100% */
+    display: flex;
+    flex-direction: column;
+    /* 让NEWS内部的内容垂直排列 */
+}
+.NEWS a{
+    color:black;
+}
+
+.NEWS p {
+    font-size: 8px;
+    color: rgb(214, 214, 214);
+    padding-top: 2px;
+}
+
+.NEWS h6 {
+    font-size: 9.5px;
+}
+
+.NEWS div {
+    height: 20%;
+    border-bottom: 1px solid rgba(215, 215, 215, 0.37);
+    padding: 10px;
+}
+
+/* 联系栏 */
+.cont {
+    display:flex;
+    margin-top: 20px;
+    background-color: aliceblue;
+    width: 100%;
+}
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+.cont .smlg img{
+    width: 120px;
+    height: 45px;
+    background-size: contain;
+}
+.phone {
+    margin-left:20px;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin-left: 50px;
+}
+.phone div{
+    padding-bottom:10px;
+}
+.phone p {
+    display:inline;
+    font-size: 7px;
+    width: 70px;
+}
+.phone h6{
+    font-size:8px;
+}
+.phone img {
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.phone div {
+    margin-top: 5px;
+}
+
+.contact-box ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right:10px;
+}
+
+.contact-box ul li {
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 9px;
+    border-radius: 20px;
+    border: 1px solid rgba(41, 135, 251, 0.281);
+    background-color: rgba(47, 129, 222, 0.29);
+}
+
+.contact-box ul li a {
+    color: rgb(218, 48, 90);
+}
+
+/* bottom */
+.fuwu-box {
+    display: flex;
+    justify-content: center;
+    background-color: #2e3033;
+}
+
+.fuwu {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fuwu ul {
+    margin-right:35px;
+}
+.fuwu div{
+    padding-left: 20px;
+}
+.fuwu ul li {
+    margin-bottom: 10px;
+    font-size: 8px;
+    color: white;
+    /* 每个列表项之间的间距，可调整 */
+}
+
+.fuwu .strong {
+    font-size: 10px;
+    font-weight: bolder;
+    color: white;
+}
+
+.fuwu a {
+    color: white;
+}
+
+.number {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.number p {
+    font-size: 10px;
+    color: white;
+    display: inline;
+}
+
+.number span {
+    font-size: 12px;
+    color: white;
+}
+
+.number img {
+    margin-top: 8px;
+    margin-right: 2px;
+    height: 10px;
+    display: flex;
+}
+
+/* 二维码 */
+.erweima {
+    display: flex;
+    justify-content: center;
+    background-color: #2e3033;
+    gap: 20px;
+}
+
+.erweima img {
+    width: 40px;
+    height: 40px;
+}
+
+.erweima .logo {
+    width: 80px;
+    height: 40px;
+}
+
+/* 备案 */
+.beian {
+    display: flex;
+    justify-content: center;
+    background-color: #2e3033;
+}
+
+.beian div {
+    display: flex;
+    justify-content: center;
+    width: 390px;
+    margin-top: 5px;
+    border-top: 1px solid #6c6c6c;
+    font-size: 7px;
+    color: #727989;
+    gap: 10px
+}
+
+.beian ul {
+    display: flexbox;
+}
+
+.beian li {
+    display: flex;
+    justify-content: center;
+
+}
+
+.beian a {
+    color: #727989;
+}
+
